@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.searchForm.valueChanges
       .pipe(
-        distinctUntilChanged(),
         debounceTime(300),
+        distinctUntilChanged(),
         takeUntil(this.#destroyed$)
       )
       .subscribe((search) => this.#todoStore.updateSearch(search));
