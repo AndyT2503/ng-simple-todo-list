@@ -1,0 +1,21 @@
+fieldset {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 350px;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+

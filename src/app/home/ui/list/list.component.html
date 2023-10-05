@@ -1,0 +1,9 @@
+<div class="todo-list">
+  <ng-container *ngFor="let item of todoList$ | async">
+    <app-todo-item
+      [todoItem]="item"
+      (onChangeStatus)="todoStore.changeStatus(item)"
+      (onDelete)="todoStore.removeTodo(item)"
+    ></app-todo-item>
+  </ng-container>
+</div>

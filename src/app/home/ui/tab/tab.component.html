@@ -1,0 +1,11 @@
+<div class="tab-list">
+  <ng-container *ngFor="let item of tabList">
+    <a
+      [routerLink]="item.link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="tab-item"
+      >{{ item.title }}</a
+    >
+  </ng-container>
+</div>

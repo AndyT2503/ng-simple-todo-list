@@ -1,0 +1,14 @@
+.todo-item {
+  border: 1px solid gray;
+  padding: 8px 16px;
+  width: 600px;
+  box-shadow: 3px 3px 10px 0px;
+  border-radius: 8px;
+
+  .btn-group {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+}

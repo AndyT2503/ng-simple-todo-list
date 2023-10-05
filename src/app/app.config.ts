@@ -1,8 +1,17 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  PreloadAllModules,
+  provideRouter,
+  withPreloading,
+} from '@angular/router';
 
 import { routes } from './app.routes';
+import { TodoStore } from './shared/store/todo.store';
+import { provideComponentStore } from '@ngrx/component-store';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+  providers: [
+    provideRouter(routes, withPreloading(PreloadAllModules)),
+    provideComponentStore(TodoStore),
+  ],
 };

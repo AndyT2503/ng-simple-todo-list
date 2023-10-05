@@ -1,0 +1,14 @@
+.tab-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+
+  .tab-item {
+    text-decoration: none;
+    color: black;
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+}

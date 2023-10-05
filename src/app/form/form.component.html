@@ -1,0 +1,21 @@
+<form [formGroup]="todoForm" (ngSubmit)="submit()">
+  <fieldset>
+    <legend>New Todo Item</legend>
+    <div class="form-item">
+      <label for="title">Title:</label>
+      <input type="text" formControlName="title" />
+    </div>
+    <div class="form-item">
+      <label for="description">Description:</label>
+      <input type="text" formControlName="description" />
+    </div>
+    <div class="form-item">
+      <label for="content">Content:</label>
+      <input type="text" formControlName="content" />
+    </div>
+    <div class="btn-group">
+      <button routerLink="/">Cancel</button>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+</form>
